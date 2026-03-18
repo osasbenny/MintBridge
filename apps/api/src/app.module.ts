@@ -14,6 +14,7 @@ import { SupportTicketsModule } from './support-tickets/support-tickets.module';
 import { NotificationsModule } from './notifications/notifications.module';
 import { RatesModule } from './rates/rates.module';
 import { AdminModule } from './admin/admin.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
