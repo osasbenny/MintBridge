@@ -1,4 +1,5 @@
-import { IsString, IsOptional } from 'class-validator';
+import { IsString, IsOptional, IsEnum } from 'class-validator';
+import { BankAccountType } from '../../database/entities/bank-account/bank-account';
 
 export class UpdateBankAccountDto {
   @IsString()
@@ -12,4 +13,12 @@ export class UpdateBankAccountDto {
   @IsString()
   @IsOptional()
   accountName?: string;
+
+  @IsEnum(BankAccountType)
+  @IsOptional()
+  type?: BankAccountType;
+
+  @IsString()
+  @IsOptional()
+  currency?: string;
 }
